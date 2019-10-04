@@ -1,7 +1,7 @@
-DROP DATABASE if exists fablib_db;
-CREATE DATABASE fablib_db;
+DROP DATABASE if exists gladlib_db;
+CREATE DATABASE gladlib_db;
 
-USE fablib_db;
+USE gladlib_db;
 
 CREATE TABLE user(
     id INTEGER(11) NOT NULL AUTO_INCREMENT,
