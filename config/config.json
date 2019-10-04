@@ -2,7 +2,7 @@
   "development": {
     "username": "root",
     "password": "password",
-    "database": "exampledb",
+    "database": "gladlib_db",
     "host": "localhost",
     "dialect": "mysql"
   },
@@ -16,6 +16,10 @@
   },
   "production": {
     "use_env_variable": "JAWSDB_URL",
+    "username": "qzsuoll2wa3vzbn9",
+    "password": "dmrdtal3jbjz7pmt",
+    "database": "jrjom5c8e68ow877",
+    "host": "jj820qt5lpu6krut.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql"
   }
 }
