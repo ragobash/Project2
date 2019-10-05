@@ -1,22 +1,22 @@
-module.exports = function(sequelize, DataTypes) {
-    var entries = sequelize.define("entries", {
-      author_id: DataTypes.INTEGER,
-      lib_id: DataTypes.INTEGER,
-      phrase_1: DataTypes.STRING,
-      phrase_2: DataTypes.STRING,
-      phrase_3: DataTypes.STRING,
-      phrase_4: DataTypes.STRING,
-      phrase_5: DataTypes.STRING,
-      phrase_6: DataTypes.STRING,
-      phrase_7: DataTypes.STRING,
-      phrase_8: DataTypes.STRING,
-      phrase_9: DataTypes.STRING,
-      phrase_10: DataTypes.STRING,
-      phrase_11: DataTypes.STRING,
-      phrase_12: DataTypes.STRING,
-      phrase_13: DataTypes.STRING,
-      phrase_14: DataTypes.STRING,
-      phrase_15: DataTypes.STRING,
-    });
-    return entries;
-  };
+module.exports = function (sequelize, DataTypes) {
+  var entries = sequelize.define("entries", {
+    author_id: DataTypes.INTEGER,
+    lib_id: DataTypes.INTEGER,
+    phrase_1: { type: DataTypes.STRING, allowNull: true },
+    phrase_2: { type: DataTypes.STRING, allowNull: true },
+    phrase_3: { type: DataTypes.STRING, allowNull: true },
+    phrase_4: { type: DataTypes.STRING, allowNull: true },
+    phrase_5: { type: DataTypes.STRING, allowNull: true },
+    phrase_6: { type: DataTypes.STRING, allowNull: true },
+    phrase_7: { type: DataTypes.STRING, allowNull: true },
+    phrase_8: { type: DataTypes.STRING, allowNull: true },
+    phrase_9: { type: DataTypes.STRING, allowNull: true },
+    phrase_10: { type: DataTypes.STRING, allowNull: true },
+    phrase_11: { type: DataTypes.STRING, allowNull: true },
+    phrase_12: { type: DataTypes.STRING, allowNull: true },
+    phrase_13: { type: DataTypes.STRING, allowNull: true },
+    phrase_14: { type: DataTypes.STRING, allowNull: true },
+    phrase_15: { type: DataTypes.STRING, allowNull: true },
+  });
+  return entries;
+};

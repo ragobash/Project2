@@ -7,17 +7,17 @@ module.exports = function(app) {
       console.log(req);
   });
 
-  // Load example page and pass in an example by id
+  //This route is served when the user clicks the "Quick Play" button and is sent to the form.
   app.get("/play", function(req, res) {
-    
-      res.render("example");
+      res.render("quickPlay");
   });
 
+
   app.get("/play/result", function(req, res) {
-    res.render("result");
+      res.render("result");
   });
-  // Render 404 page for any unmatched routes
-  app.get("*", function(req, res) {
-    res.render("404");
-  });
+
+  // app.get("*", function(req, res) {
+  //   res.render("404");
+  // });
 };
