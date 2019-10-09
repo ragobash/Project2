@@ -12,44 +12,54 @@
 
 <div class="container">
   <div class="row valign-wrapper">
-    <form class="col s12" method="POST">
+    <form class="col s12" action="/quickplay" method="POST">
       <div class="row">
         <div class="input-field col s4 offset-s4">
-          <input id="word1" type="text" class="validate">
-          <label for="word1">Noun</label>
+          <input name="input1" id="input1" type="text" class="validate">
+          <label for="input1">{{type1}}</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s4 offset-s4">
-          <input id="word2" type="text" class="validate">
-          <label for="word2">Verb ends with -ing</label>
+          <input name="input2" id="input2" type="text" class="validate">
+          <label for="input2">{{type2}}</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s4 offset-s4">
-          <input id="word3" type="text" class="validate">
-          <label for="word3">Part of body</label>
+          <input name="input3" id="input3" type="text" class="validate">
+          <label for="input3">{{type3}}</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s4 offset-s4">
-          <input id="word4" type="text" class="validate">
-          <label for="word4">Adjective</label>
+          <input name="input4" id="input4" type="text" class="validate">
+          <label for="input4">{{type4}}</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s4 offset-s4">
-          <input id="word5" type="text" class="validate">
-          <label for="word5">Name</label>
+          <input name="input5" id="input5" type="text" class="validate">
+          <label for="input5">{{type5}}</label>
         </div>
+      </div>
+      <div class="row">
+       <div class="input-field col s4 offset-s4">
+         <input name="input6" id="input6" type="text" class="validate">
+         <label for="input6">{{type6}}</label>
+       </div>
+      </div>
+      <div class="row">
+       <div class="input-field col s4 offset-s4">
+         <input name="input7" id="input7" type="text" class="validate">
+         <label for="input7">{{type7}}</label>
+       </div>
       </div>
 
       <div class="row center">
 
-        <button class="btn waves-effect waves-light " type="submit" name="action">
-          <a href="/play/result">
+        <button class="btn waves-effect waves-light " type="submit">
             Submit
-          </a>
         </button>
       </div>
 
