@@ -1,0 +1,71 @@
+Category: "Personal Ad"
+Phrase 1: "I enjoy long "
+Phrase 2: " walks on the beach, getting "
+Phrase 3: " in the rain and serendipitous encounters with "
+Phrase 4: ". I really like piña coladas mixed with "
+Phrase 5: " and romantic, candle-lit "
+Phrase 6: ". I am well-read from Dr. Seuss to "
+Phrase 7: ". I travel frequently, especially to "
+Phrase 8: " when I am not busy with work. (I am a "
+Phrase 9: "). I am looking for "
+Phrase 10: " and beauty in the form of a "
+Phrase 11: " goddess. She should have the physique of "
+Phrase 12: " and the "
+Phrase 13: " of "
+Phrase 14: "."
+
+Word Type 1: Adjective
+Word Type 2: Noun
+Word Type 3: Noun
+Word Type 4: Noun
+Word Type 5: Plural Noun
+Word Type 6: Person
+Word Type 7: Place
+Word Type 8: Job
+Word Type 9: Adjective
+Word Type 10: Adjective
+Word Type 11: Famous Person
+Word Type 12: Noun
+Word Type 13: Noun
+
+Category: "Sick Note"
+Phrase 1: "Dear School Nurse:"
+Phrase 2: " will not be attending school today. He/she has come down with a case of "
+Phrase 3: " and has horrible "
+Phrase 4: " and a fever. We have made an appointment with the "
+Phrase 5: " doctor, who studied for many years in "
+Phrase 6: " and has a degree in pediatrics. He will send you all the information you need. Thank you! Sincerely Mrs. "
+Phrase 7: "."
+
+Word Type 1: Name of Person in Room
+Word Type 2: Made Up Disease
+Word Type 3: Symptom
+Word Type 4: Noun
+Word Type 5: Plural Noun
+Word Type 6: Last Name of Person in Room
+
+Category: "How to Wash Your Face"
+Phrase 1: "In order to wash your face, you must wet your "
+Phrase 2: " in warm "
+Phrase 3: ". Then, "
+Phrase 4: " it across your face 2 times. This will wash off any remaining "
+Phrase 5: ". When you are done you should "
+Phrase 6: " the cloth in "
+Phrase 7: " water to clean it. You should also wash your face with a "
+Phrase 8: " to keep it smooth and shiny. Don`t worry. It is normal to experience "
+Phrase 9: " the first time you try this. Consult your "
+Phrase 10: " if you break out in "
+Phrase 11: ". This works well on your "
+Phrase 12: " too!"
+
+Word Type 1: Noun
+Word Type 2: Noun
+Word Type 3: Verb
+Word Type 4: Noun
+Word Type 5: Verb
+Word Type 6: Adjective
+Word Type 7: Noun
+Word Type 8: Noun
+Word Type 9: Noun
+Word Type 10: Noun
+Word Type 11: Noun
