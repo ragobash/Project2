@@ -1,6 +1,18 @@
-<div class="container">
-    <p>The story with inputs will go here</p>
-    <p>{{first}}{{second}}{{third}}{{fourth}}{{fifth}}{{sixth}}{{seventh}}</p>
+<nav class="light-blue lighten-1" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo"><img src="./images/smalllogo.png"></a>
+        <ul class="right hide-on-med-and-down">
+            <li><a href="/">Home</a></li>
+        </ul>
 
+        <ul id="nav-mobile" class="sidenav">
+            <li><a href="/">Home</a></li>
+        </ul>
+        <a href="/" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">Menu</i></a>
+    </div>
+</nav>
 
+<div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+        <blockquote class="center-align story"><span>{{firstPhrase}}{{firstInput}}{{secondPhrase}}{{secondInput}}{{thirdPhrase}}{{thirdInput}}{{fourthPhrase}}{{fourthInput}}{{fifthPhrase}}{{fifthInput}}{{sixthPhrase}}{{sixthInput}}{{seventhPhrase}}{{seventhInput}}</span></blockquote>
+    </div>
 </div>
