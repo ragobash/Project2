@@ -1,68 +1,120 @@
 <nav class="light-blue lighten-1" role="navigation">
-  <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo"><img src="./images/smalllogo.png"></a>
+  <div class="nav-wrapper container">
+    <a id="logo-container" href="/" class="brand-logo">
+      <img src="./images/smalllogo.png">
+    </a>
     <ul class="right hide-on-med-and-down">
       <li><a href="/">Home</a></li>
     </ul>
     <ul id="nav-mobile" class="sidenav">
       <li><a href="/">Home</a></li>
     </ul>
-    <a href="/" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">Home</i></a>
+    <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">Home</i></a>
   </div>
 </nav>
 
 <div class="container">
   <div class="row valign-wrapper">
-    <form class="col s12" action="/quickplay" method="POST">
-      <div class="row">
+    <form class="col s12" action="/story/{{wordType.id}}" method="POST">
+      <div class="row" id="input1">
         <div class="input-field col s4 offset-s4">
-          <input name="input1" id="input1" type="text" class="validate">
-          <label for="input1">{{type1}}</label>
+          <input name="input1" type="text" class="validate">
+          <label for="input1">{{wordType.type1}}</label>
         </div>
       </div>
-      <div class="row">
+      <div class="row" id="input2">
         <div class="input-field col s4 offset-s4">
-          <input name="input2" id="input2" type="text" class="validate">
-          <label for="input2">{{type2}}</label>
+          <input name="input2" type="text" class="validate">
+          <label for="input2">{{wordType.type2}}</label>
         </div>
       </div>
-      <div class="row">
+      <div class="row" id="input3">
         <div class="input-field col s4 offset-s4">
-          <input name="input3" id="input3" type="text" class="validate">
-          <label for="input3">{{type3}}</label>
+          <input name="input3" type="text" class="validate">
+          <label for="input3">{{wordType.type3}}</label>
         </div>
       </div>
-      <div class="row">
+      <div class="row" id="input4">
         <div class="input-field col s4 offset-s4">
-          <input name="input4" id="input4" type="text" class="validate">
-          <label for="input4">{{type4}}</label>
+          <input name="input4" type="text" class="validate">
+          <label for="input4">{{wordType.type4}}</label>
         </div>
       </div>
-      <div class="row">
+      <div class="row" id="input5">
         <div class="input-field col s4 offset-s4">
-          <input name="input5" id="input5" type="text" class="validate">
-          <label for="input5">{{type5}}</label>
+          <input name="input5" type="text" class="validate">
+          <label for="input5">{{wordType.type5}}</label>
         </div>
       </div>
-      <div class="row">
+      <div class="row" id="input6">
        <div class="input-field col s4 offset-s4">
-         <input name="input6" id="input6" type="text" class="validate">
-         <label for="input6">{{type6}}</label>
+         <input name="input6" type="text" class="validate">
+         <label for="input6">{{wordType.type6}}</label>
        </div>
       </div>
-      <div class="row">
+      <div class="row" id="input7">
        <div class="input-field col s4 offset-s4">
-         <input name="input7" id="input7" type="text" class="validate">
-         <label for="input7">{{type7}}</label>
+         <input name="input7" type="text" class="validate">
+         <label for="input7">{{wordType.type7}}</label>
        </div>
       </div>
-
+      <div class="row" id="input8">
+        <div class="input-field col s4 offset-s4">
+          <input name="input8" type="text" class="validate">
+          <label for="input8">{{wordType.type8}}</label>
+        </div>
+      </div>
+      <div class="row" id="input9">
+        <div class="input-field col s4 offset-s4">
+          <input name="input9" type="text" class="validate">
+          <label for="input9">{{wordType.type9}}</label>
+        </div>
+      </div>
+      <div class="row" id="input10">
+        <div class="input-field col s4 offset-s4">
+          <input name="input10" type="text" class="validate">
+          <label for="input10">{{wordType.type10}}</label>
+        </div>
+      </div>
+      <div class="row" id="input11">
+        <div class="input-field col s4 offset-s4">
+          <input name="input11" type="text" class="validate">
+          <label for="input11">{{wordType.type11}}</label>
+        </div>
+      </div>
+      <div class="row" id="input12">
+        <div class="input-field col s4 offset-s4">
+          <input name="input12" type="text" class="validate">
+          <label for="input12">{{wordType.type12}}</label>
+        </div>
+      </div>
+      <div class="row" id="input13">
+       <div class="input-field col s4 offset-s4">
+         <input name="input13" type="text" class="validate">
+         <label for="input13">{{wordType.type13}}</label>
+       </div>
+      </div>
+      <div class="row" id="input14">
+       <div class="input-field col s4 offset-s4">
+         <input name="input14" type="text" class="validate">
+         <label for="input14">{{wordType.type14}}</label>
+       </div>
+      </div>
       <div class="row center">
 
         <button class="btn waves-effect waves-light " type="submit">
             Submit
         </button>
       </div>
+
+
+
     </form>
   </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script>
+  $(document).ready(function(){
+    $("div label:empty").parent().hide()
+});
+</script>

@@ -1,8 +1,8 @@
 {
   "development": {
     "username": "root",
-    "password": "83257",
-    "database": "project2_test",
+    "password": "password",
+    "database": "gladlibs",
     "host": "localhost",
     "dialect": "mysql"
   },
