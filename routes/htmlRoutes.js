@@ -66,6 +66,16 @@ module.exports = function(app) {
      });
    });
  });
+
+   //FOR LOGIN SYSTEM LATER DOWN THE ROAD MAP -------
+
+//  app.get("/login", function(req, res) {
+//   res.render("login");
+//  });
+
+  //FOR LOGIN SYSTEM LATER DOWN THE ROAD MAP -------
+
+ 
  // Render 404 page for any unmatched routes
  app.get("*", function(req, res) {
    res.render("404");

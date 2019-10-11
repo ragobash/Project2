@@ -8,9 +8,8 @@ module.exports = function(sequelize, DataTypes) {
       type6: DataTypes.STRING,
       type7: DataTypes.STRING
     });
-    Wordtype.sync({ force: true }).then(function() {
       // Table created
-      return Wordtype.create({
+       Wordtype.create({
         type1: "Name",
         type2: "Number",
         type3: "Verb ending with -ing",
@@ -19,7 +18,7 @@ module.exports = function(sequelize, DataTypes) {
         type6: "and action that you really hate doing",
         type7: "cat name"
       });
-    });
+    
     return Wordtype;
   };
   

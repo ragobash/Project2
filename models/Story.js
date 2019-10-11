@@ -19,7 +19,9 @@ module.exports = function(sequelize, DataTypes) {
         phrase6: " bootcamp. If you like what I'm doing, ",
         phrase7: " me on Instagram @"
       });
-    });
+    }).catch(function(err) {
+      console.log(err)
+    });;
     return Story;
   };
   
