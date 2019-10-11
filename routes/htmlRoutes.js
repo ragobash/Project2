@@ -73,7 +73,7 @@ app.get("/result/:id", (req, res) => {
  app.get("*", function(req, res) {
    res.render("404");
  });
-};
+
   app.post("/story/:storyId", function(req, res) {
     var {input1,input2,input3,input4,input5,input6,input7,input8,input9,input10,input11,input12,input13,input14} = req.body;
     var id = req.params.storyId;
@@ -84,7 +84,5 @@ app.get("/result/:id", (req, res) => {
     .then(data => res.redirect(`/result/${id}`))
   });
 
-  app.get("*", function(req, res) {
-    res.render("404");
-  });
+ 
 };
