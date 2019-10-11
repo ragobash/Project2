@@ -21,6 +21,30 @@ module.exports = function(sequelize, DataTypes) {
     input7: {
       type: DataTypes.STRING
     },
+    input8: {
+      type: DataTypes.STRING
+    },
+    input9: {
+      type: DataTypes.STRING
+    },
+    input10: {
+      type: DataTypes.STRING
+    },
+    input11: {
+      type: DataTypes.STRING
+    },
+    input12: {
+      type: DataTypes.STRING
+    },
+    input13: {
+      type: DataTypes.STRING
+    },
+    input14: {
+      type: DataTypes.STRING
+    }
   });
+  Input.associate = function(models) {
+    Input.belongsTo(models.Wordtype);
+  }
   return Input;
 };
