@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "R1y9A9n0",
+    "password": "password",
     "database": "gladlibs",
     "host": "localhost",
     "dialect": "mysql"

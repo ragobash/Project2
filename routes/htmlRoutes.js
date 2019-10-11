@@ -1,73 +1,51 @@
 var db = require("../models");
 
 module.exports = function(app) {
- // Load index page
- app.get("/", function(req, res) {
-   res.render("home");
- });
- // Load result page here
-   app.get("/output", function(req, res) {
-     db.Input.findAll({}).then(output => {
-       db.Story.findAll({where: {}}).then(storyOutput => {
-           res.render("result", {
-             firstPhrase: storyOutput[storyOutput.length-1].phrase1,
-             secondPhrase: storyOutput[storyOutput.length-1].phrase2,
-             thirdPhrase: storyOutput[storyOutput.length-1].phrase3,
-             fourthPhrase: storyOutput[storyOutput.length-1].phrase4,
-             fifthPhrase: storyOutput[storyOutput.length-1].phrase5,
-             sixthPhrase: storyOutput[storyOutput.length-1].phrase6,
-             seventhPhrase: storyOutput[storyOutput.length-1].phrase7,
-             firstInput: output[output.length-1].input1,
-             secondInput: output[output.length-1].input2,
-             thirdInput: output[output.length-1].input3,
-             fourthInput: output[output.length-1].input4,
-             fifthInput: output[output.length-1].input5,
-             sixthInput: output[output.length-1].input6,
-             seventhInput: output[output.length-1].input7
-         });
-       });
-     });
-   });
- //display form with required type of word
- app.get('/quickplay', function(req, res) {
-   db.Wordtype.findAll({}).then(wordType => {
-     res.render("quickplay", {
-       type1: wordType[wordType.length-1].type1,
-       type2: wordType[wordType.length-1].type2,
-       type3: wordType[wordType.length-1].type3,
-       type4: wordType[wordType.length-1].type4,
-       type5: wordType[wordType.length-1].type5,
-       type6: wordType[wordType.length-1].type6,
-       type7: wordType[wordType.length-1].type7
-     })
- });
+  // Load index page
+  app.get("/", function(req, res) {
+    res.render("home");
+  });
+app.get("/quickplay", (req, res) => {
+  db.Story.findAll({
+    order: db.sequelize.random()
+  }).then((data) => {
+    var randId = data[0].dataValues.id 
+    console.log(randId)
+    res.redirect(`/story/${randId}`)
+  })
+})
+app.get("/story/:storyId", function(req, res) {
+  db.Wordtype.findOne({where: {id: req.params.storyId}}).then(wordType => {
+    console.log(wordType.dataValues);
+    var data = wordType.dataValues;
+
+    res.render("quickPlay", {wordType: data});
+  });
 });
- // Input random words
- app.post('/quickplay', function(req, res) {
-   var {input1, input2, input3, input4, input5, input6, input7} = req.body;
-   //insert into table
-   db.Input.create({
-     input1,
-     input2,
-     input3,
-     input4,
-     input5,
-     input6,
-     input7
-   })
-   .then(input => res.redirect('/output'))
-   .catch(err => console.log(err));
- });
- // Load example page and pass in an example by id
- app.get("/example/:id", function(req, res) {
-   db.Example.findOne({ where: { id: req.params.id } }).then(function(dbExample) {
-     res.render("example", {
-       example: dbExample
-     });
-   });
- });
- // Render 404 page for any unmatched routes
- app.get("*", function(req, res) {
-   res.render("404");
- });
+
+app.get("/result/:id", (req, res) => {
+  db.Story.findOne({where: {id: req.params.id}}).then(story => {
+    console.log(story.dataValues);
+    db.Input.findAll({where: {WordtypeId: req.params.id}}).then(input => {
+      console.log(input[input.length-1].dataValues);
+      res.render("result", {
+        story: story.dataValues,
+        input: input[input.length-1].dataValues
+      })
+    });
+  });
+});
+  app.post("/story/:storyId", function(req, res) {
+    var {input1,input2,input3,input4,input5,input6,input7,input8,input9,input10,input11,input12,input13,input14} = req.body;
+    var id = req.params.storyId;
+    db.Input.create({
+      input1,input2,input3,input4,input5,input6,input7,input8,input9,input10,input11,input12,input13,input14,
+      WordtypeId: req.params.storyId
+    })
+    .then(data => res.redirect(`/result/${id}`))
+  });
+
+  app.get("*", function(req, res) {
+    res.render("404");
+  });
 };
