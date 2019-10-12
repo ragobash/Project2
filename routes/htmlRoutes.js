@@ -35,6 +35,45 @@ app.get("/result/:id", (req, res) => {
     });
   });
 });
+ // Input random words
+ app.post('/quickplay', function(req, res) {
+   var {input1, input2, input3, input4, input5, input6, input7} = req.body;
+   //insert into table
+   db.Input.create({
+     input1,
+     input2,
+     input3,
+     input4,
+     input5,
+     input6,
+     input7
+   })
+   .then(input => res.redirect('/output'))
+   .catch(err => console.log(err));
+ });
+ // Load example page and pass in an example by id
+ app.get("/example/:id", function(req, res) {
+   db.Example.findOne({ where: { id: req.params.id } }).then(function(dbExample) {
+     res.render("example", {
+       example: dbExample
+     });
+   });
+ });
+
+   //FOR LOGIN SYSTEM LATER DOWN THE ROAD MAP -------
+
+//  app.get("/login", function(req, res) {
+//   res.render("login");
+//  });
+
+  //FOR LOGIN SYSTEM LATER DOWN THE ROAD MAP -------
+
+ 
+ // Render 404 page for any unmatched routes
+ app.get("*", function(req, res) {
+   res.render("404");
+ });
+
   app.post("/story/:storyId", function(req, res) {
     var {input1,input2,input3,input4,input5,input6,input7,input8,input9,input10,input11,input12,input13,input14} = req.body;
     var id = req.params.storyId;
@@ -45,7 +84,5 @@ app.get("/result/:id", (req, res) => {
     .then(data => res.redirect(`/result/${id}`))
   });
 
-  app.get("*", function(req, res) {
-    res.render("404");
-  });
+ 
 };
